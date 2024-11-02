@@ -1,0 +1,40 @@
+.spacer {
+  flex: 0.5 0.5 auto;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 600px;
+}
+
+.centered-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+mat-list {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+mat-list a {
+  color: white !important;
+  text-decoration: none;
+  padding: 4px 16px;
+  white-space: nowrap;
+  flex-grow: 1;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 8px;
+}
+
+
+mat-list a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
