@@ -1,14 +1,46 @@
 <mat-toolbar color="primary">
     <span>DNYANRAJ'S PORTFOLIO</span>
     <span class="spacer"></span>
+  
+    <!-- Menu icon, only shown on smaller screens -->
+    <button *ngIf="isMobileView" mat-icon-button class="menu-icon" aria-label="Navigation menu" [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+  
+    <!-- Navigation links for larger screens -->
     <div class="centered-list">
-        <mat-list>
-            <a class="mat-list-item" href="#about">ABOUT</a>
-            <a class="mat-list-item" href="#experience">EXPERIENCE</a>
-            <a class="mat-list-item" href="#projects">PROJECTS</a>
-            <a class="mat-list-item" href="#skills">SKILLS</a>
-            <a class="mat-list-item" href="#education">EDUCATION</a>
-            <a class="mat-list-item" href="#contact">CONTACT</a>
-        </mat-list>
+      <mat-list>
+        <a class="mat-list-item" href="#about">ABOUT</a>
+        <a class="mat-list-item" href="#skills">SKILLS</a>
+        <a class="mat-list-item" href="#experience">EXPERIENCE</a>
+        <a class="mat-list-item" href="#projects">PROJECTS</a>
+        <a class="mat-list-item" href="#education">EDUCATION</a>
+        <a class="mat-list-item" href="#contact">CONTACT</a>
+      </mat-list>
     </div>
-</mat-toolbar>
+  </mat-toolbar>
+
+  <!-- Profile Section -->
+<div class="profile-section">
+    <img src="assets/images/profile-image.jpg" alt="Profile Photo" class="profile-photo" />
+    <h1 class="profile-name">Dnyanraj B</h1>
+    <p class="profile-title">Software Engineer</p>
+  
+    <div class="profile-actions">
+      <button mat-raised-button color="primary" class="action-button" (click)="scrollToContact()">Hire Me</button>
+      <a href="assets/dnyanrajResume.pdf" download="Dnyanraj's Resume.pdf">
+        <button mat-raised-button color="primary" class="action-button">Download CV</button>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Mobile dropdown menu -->
+  <mat-menu #menu="matMenu">
+    <a mat-menu-item href="#about">ABOUT</a>
+    <a mat-menu-item href="#skills">SKILLS</a>
+    <a mat-menu-item href="#experience">EXPERIENCE</a>
+    <a mat-menu-item href="#projects">PROJECTS</a>
+    <a mat-menu-item href="#education">EDUCATION</a>
+    <a mat-menu-item href="#contact">CONTACT</a>
+  </mat-menu>
+  
