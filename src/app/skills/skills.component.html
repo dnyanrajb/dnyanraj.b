@@ -1,0 +1,13 @@
+<mat-card id="skills">
+    <mat-card-content>
+        <h1>SKILLS</h1>
+        <div class="progress-container">
+        @for(skills of skillSet; track skills.name) {
+                <div class="progress-item">
+                    <h3>{{skills.name}}</h3>
+                    <mat-progress-bar mode="determinate" value="{{skills.value}}"></mat-progress-bar>
+                </div>
+        }
+    </div>
+    </mat-card-content>
+</mat-card>          
