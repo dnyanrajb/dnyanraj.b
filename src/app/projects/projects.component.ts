@@ -17,8 +17,9 @@ constructor() {}
 
 openDialog() {
   const dialogRef = this.dialog.open(ProjectDialogComponent, {
-    height: '400px',
-    width: '600px',
+    width: '90vw',
+    height: '80vh',
+    autoFocus: false,
   });
 }
 goToLink(url: string) {

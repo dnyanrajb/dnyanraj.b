@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { ProfileService } from '../profile.service';
-import { educationDataType } from '../profile.model';
+import { EducationDataType } from '../profile.model';
 
 @Component({
   selector: 'app-education',
@@ -13,5 +13,5 @@ import { educationDataType } from '../profile.model';
 })
 export class EducationComponent {
   constructor(private profileService: ProfileService) {}
-  educations: educationDataType[] = this.profileService.education();
+  educations: EducationDataType[] = this.profileService.education();
 }
