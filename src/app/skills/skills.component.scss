@@ -1,1 +1,29 @@
+.textarea-container {
+    display: flex;
+    justify-content: center; // Center the textarea horizontally
+    margin: 20px 0; // Add space above and below the textarea
 
+    textarea {
+        width: 100%; // Make the textarea take full width of the container
+        max-width: 600px; // Set a maximum width for larger screens
+        height: 100px; // Set a height for the textarea
+        padding: 10px; // Add padding for better text spacing
+        border: 1px solid #ccc; // Add a border
+        border-radius: 4px; // Round the corners
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Add a subtle shadow
+        font-size: 16px; // Set font size
+        resize: none; // Disable resizing
+
+        // Add focus styles
+        &:focus {
+            outline: none; // Remove default outline
+            border-color: #3f51b5; // Change border color on focus
+            box-shadow: 0 0 5px rgba(63, 81, 181, 0.5); // Add shadow on focus
+        }
+    }
+}
+.button-container {
+    display: flex;
+    justify-content: center; // Center the button horizontally
+    margin: 20px 0; // Add space above and below the button
+}

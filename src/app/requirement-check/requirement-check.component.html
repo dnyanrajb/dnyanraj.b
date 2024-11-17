@@ -1,0 +1,30 @@
+<div class="skills-container">
+  <div class="skills-list">
+    <h2>Matched Skills</h2>
+    <ul>
+       @for(skill of matchedSkills; track skill.name) {
+        <li>{{ skill.name }}</li>
+       }
+       @empty {
+        <li>None of the required skills are matching</li>
+       }
+    </ul>
+  </div>
+
+  <div class="skills-list">
+    <h2>Unmatched Skills</h2>
+    <ul>
+      @for(skill of unmatchedSkills; track skill.name) {
+        <li>{{ skill.name + ' (check for spelling mistakes if not found)' }}</li>
+      }
+      @empty {
+        <li>Hurray All required skills are matching</li>
+      }
+    </ul>
+  </div>
+</div>
+
+<div class="centered-container">
+  <h2>Click the below button to see the percentage of skills matched:</h2>
+  <button mat-raised-button color="primary" (click)="calculatePercentage()">Check Percentage</button>
+</div>
