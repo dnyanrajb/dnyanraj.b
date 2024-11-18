@@ -1,0 +1,10 @@
+.mat-card-content {
+    display: flex;
+    flex-direction: column; // Stack items vertically
+}
+
+.button-container {
+    display: flex; // Use flexbox for button alignment
+    gap: 10px; // Space between buttons
+    margin-top: 10px;
+}

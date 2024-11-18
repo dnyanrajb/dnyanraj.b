@@ -1,0 +1,17 @@
+<mat-card id="education">
+    <div class="education-section">
+        <h1>EDUCATION</h1>
+        <div class="education-card" *ngFor="let education of educations">
+          <div class="education-year-degree">
+            <p class="year">{{ education.year }}</p>
+            <p class="degree">{{ education.degree }}</p>
+          </div>
+          <div class="education-details">
+            <h3>{{ education.field }}</h3>
+            <h4>{{ education.institution }}</h4>
+          </div>
+        </div>
+      </div>
+</mat-card>
+
+  

@@ -9,3 +9,148 @@ footer {
   bottom: 0;
   width: 100%;
 }
+mat-card {
+  width: auto;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2) !important;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+
+  @media (max-width: 600px) {
+    width: 95%;
+  }
+}
+.card-width {
+  width: 35%;
+}
+@media (max-width: 768px) {
+  .card-width {
+      width: 100%; // Full width for smaller screens
+  }
+}
+img {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 1000px) {
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-list {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .basic-info {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+.progress-container {
+  display: flex;
+  flex-wrap: wrap; // Allows wrapping to the next line if necessary
+  gap: 20px; // Space between progress items
+}
+
+.progress-item {
+  flex: 1; // Allows items to grow and fill available space
+  min-width: 200px; // Minimum width for each progress item
+}
+
+mat-progress-bar {
+  height: 30px; // Increase the height of the progress bar
+}
+.education-section {
+  padding: 20px;
+  max-width: 96%;
+  margin: 0 auto;
+  color: #333;
+}
+
+.education-card {
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.education-year-degree {
+  background-color: #113D60; // Dark blue color
+  color: white;
+  padding: 20px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .year {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .degree {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 600px) {
+  .education-card {
+      flex-direction: column; // Stack items vertically
+  }
+
+  .education-year-degree {
+      width: 100%; // Ensure it takes full width
+  }
+
+  .education-details {
+      width: 100%; // Ensure it takes full width
+      padding: 10px; // Optional: Add some padding for better spacing
+  }
+}
+
+.education-details {
+  padding: 20px;
+  flex-grow: 1;
+
+  h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+
+  h4 {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #113D60;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-left: 20px;
+
+    li {
+      font-size: 1em;
+      margin-bottom: 5px;
+      color: #666;
+    }
+  }
+}

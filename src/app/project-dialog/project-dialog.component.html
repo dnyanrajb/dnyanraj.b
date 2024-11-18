@@ -1,0 +1,41 @@
+<mat-dialog-content class="dialog-content">
+  <div class="header">
+    <h2>Angular Concepts used in this project</h2>
+  </div>
+  <div class="card-container">
+    <div class="flippable-card" *ngFor="let concept of angularConcepts">
+      <div class="card" [ngClass]="{'flipped': concept.isFlipped}" (click)="toggleFlip(concept)">
+        <div class="card-front">
+          <h3>{{ concept.title }}</h3>
+          <p>{{ concept.description | truncate: 160 }}</p>
+        </div>
+        <div class="card-back">
+          <h4>Code Snippet</h4>
+          <pre>{{ concept.codeSnippet }}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="header">
+    <h2>Angular 17 Features used in this project</h2>
+  </div>
+  <div class="card-container">
+    <div class="flippable-card" *ngFor="let feature of angular17Features">
+      <div class="card" [ngClass]="{'flipped': feature.isFlipped}" (click)="toggleFlip(feature)">
+        <div class="card-front">
+          <h3>{{ feature.title }}</h3>
+          <p>{{ feature.description }}</p>
+        </div>
+        <div class="card-back">
+          <h4>Code Snippet</h4>
+          <pre>{{ feature.codeSnippet }}</pre>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dialog-button-container">
+    <button color="primary" mat-flat-button (click)="goToLink('https://github.com/dnyanrajb/dnyanraj.b')">Code View</button>
+    <button color="primary" mat-flat-button (click)="close()">Close View</button>
+  </div>
+</mat-dialog-content>

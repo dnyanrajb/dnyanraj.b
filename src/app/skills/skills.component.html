@@ -1,0 +1,31 @@
+<mat-card id="skills">
+    <mat-card-content>
+        <h1>SKILLS</h1>
+        <h2>Total Skill Proficiency Percentage: {{ totalSkillValuePercentage() | number: '1.0-0' }}%</h2>
+        <div class="progress-container">
+        @for(skills of skillSet(); track skills.name) {
+                <div class="progress-item">
+                    <h3>{{skills.name}}</h3>
+                    <mat-progress-bar mode="determinate" value="{{skills.value}}"></mat-progress-bar>
+                </div>
+        }
+    </div>
+    
+    <div class="textarea-container" *ngIf="showTextarea || percentageMatch !== null">
+        <textarea [(ngModel)]="requirements" placeholder="Enter job requirements, separated by commas to check whether I am a right match"></textarea>
+    </div>
+
+    <div class="button-container" *ngIf="showTextarea || percentageMatch !== null">
+        <button mat-raised-button color="primary" (click)="checkRequirements()">Check Requirement</button>
+    </div>
+
+    <div *ngIf="showRequirementCheck">
+        <app-requirement-check [requirements]="requirements" (percentageCalculated)="handlePercentageCalculated($event)"></app-requirement-check>
+    </div>
+    @if(percentageMatch !== null) {
+        <div class="button-container">
+            <h2>Percentage of Skills Matched: {{ percentageMatch | number: '1.0-0' }}%</h2>
+        </div>
+    }
+    </mat-card-content>
+</mat-card>          

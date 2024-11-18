@@ -1,0 +1,42 @@
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; // Allow wrapping for smaller screens
+  margin: 20px 0;
+
+  .skills-list {
+    flex: 1; // Allow each list to take equal space
+    min-width: 300px; // Sets a minimum width
+    margin: 0 10px;
+
+    h2 {
+      text-align: center;
+    }
+
+    ul {
+      list-style-type: none; // Remove default list styling
+      padding: 0; // Remove padding
+    }
+
+    li {
+      padding: 5px 0;
+      border-bottom: 1px solid #ccc; // Add a bottom border for separation
+    }
+  }
+}
+
+.centered-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; // Center items horizontally
+  text-align: center; // Center text
+  margin: 20px 0; // Add some margin for spacing
+}
+
+// Responsive adjustments for smaller screens
+@media (max-width: 600px) {
+  .skills-container {
+    flex-direction: column; // Stack items vertically
+  }
+}
+

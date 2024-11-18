@@ -1,0 +1,28 @@
+.textarea-container {
+    display: flex;
+    justify-content: center; // Center the textarea horizontally
+    margin: 20px 0;
+
+    textarea {
+        width: 100%;
+        max-width: 600px; // Set a maximum width for larger screens
+        height: 100px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px; // Round the corners
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        resize: none; // Disable resizing
+
+        &:focus {
+            outline: none; // Remove default outline
+            border-color: #3f51b5; // Changes border color on focus
+            box-shadow: 0 0 5px rgba(63, 81, 181, 0.5); // Adds shadow on focus
+        }
+    }
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
