@@ -22,11 +22,10 @@ export class SkillsComponent {
   percentageMatch: number | null = null;
   showTextarea: boolean = true;
 
-  // Computed signal to get the total skill value as a percentage
   totalSkillValuePercentage = computed(() => {
     const totalValue = this.skillSet().reduce((total, skill) => total + skill.value, 0);
-    const maxValue = this.skillSet().length * 100; // Assuming each skill has a max value of 100
-    return maxValue > 0 ? (totalValue / maxValue) * 100 : 0; // Calculate percentage
+    const maxValue = this.skillSet().length * 100;
+    return maxValue > 0 ? (totalValue / maxValue) * 100 : 0;
   });
 
   constructor(private profileService: ProfileService) {
